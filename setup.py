@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="apextras", 
+    name="apextras",
     version="0.9.0",
     author="David Zerrenner",
     author_email="dazer017@gmail.com",

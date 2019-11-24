@@ -24,9 +24,17 @@ A `WideHelpFormatter` subclass with its `percentage_of_line_length` set to three
 
 A `ThreeQuarterWidthHelpFormatter` subclass which also derives from `argparse.ArgumentDefaultsHelpFormatter`. This means that in addition to using 3/4 of the terminal line length, it also prints the argument defaults in the help text.
 
-## Usage
+## Installation & Usage
 
-Use these classes in the same way as any other `argparse.HelpFormatter` subclass while creating your argument parser:
+Install the package with your favourite python package manager:
+
+    pip install apextras
+
+or directly into your [pipenv](https://pipenv.readthedocs.io/):
+
+    pipenv install apextras
+
+After that, you can use these classes in the same way as any other `argparse.HelpFormatter` subclass while creating your argument parser:
 
     from apextras.formatter import WideHelpFormatter
     parser = argparse.ArgumentParser(formatter_class=WideHelpFormatter)
