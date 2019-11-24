@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="apextras",
-    version="0.9.0",
+    version="0.9.1",
     author="David Zerrenner",
     author_email="dazer017@gmail.com",
     description="Some helpers for python's argparse",
