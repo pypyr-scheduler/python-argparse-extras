@@ -7,7 +7,7 @@ python's `argparse` module:
 
 ## Contents
 
-### `WideHelpFormatter`
+### `formatter.WideHelpFormatter`
 
 HelpFormatter which tries to use a given amount of the terminal width.
 
@@ -16,11 +16,11 @@ This defaults to the full width (1.0). Override this class and set your own perc
 
 This uses ``shutil.get_terminal_size()`` to determine the line length.
 
-### `ThreeQuarterWidthHelpFormatter`
+### `formatter.ThreeQuarterWidthHelpFormatter`
 
 A `WideHelpFormatter` subclass with its `percentage_of_line_length` set to three quarters of the terminal line length.
 
-### `ThreeQuarterWidthDefaultsHelpFormatter`
+### `formatter.ThreeQuarterWidthDefaultsHelpFormatter`
 
 A `ThreeQuarterWidthHelpFormatter` subclass which also derives from `argparse.ArgumentDefaultsHelpFormatter`. This means that in addition to using 3/4 of the terminal line length, it also prints the argument defaults in the help text.
 
@@ -28,6 +28,7 @@ A `ThreeQuarterWidthHelpFormatter` subclass which also derives from `argparse.Ar
 
 Use these classes in the same way as any other `argparse.HelpFormatter` subclass while creating your argument parser:
 
-    parser = argparse.ArgumentParser(formatter_class=<HelpFormatter>)
+    from apextras.formatter import WideHelpFormatter
+    parser = argparse.ArgumentParser(formatter_class=WideHelpFormatter)
     parser.add_argument(...)
     ...
